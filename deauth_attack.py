@@ -1,10 +1,10 @@
 #!/usr/bin/python
 """
-RedSpectrum - get_handshakes.py
+RedSpectrum - deauth_attack.py
 April 1, 2017
 Leopold von Niebelschuetz-Godlewski
 
-Grabs WPA PSK handshakes.
+Deauthenticates wireless devices.
 """
 import argparse, os, sys, time
 from core import check_SSIDs, clean_AP_data, clean_station_data, clean_user_input, deauth, disable_interfering_processes, disable_monitor_mode, enable_monitor_mode, find_output_files, kill_process, print_error, print_success, print_warning, run_process
@@ -55,7 +55,7 @@ if __name__ == "__main__":
 	if ssids: check_SSIDs(APs,ssids)
 	stations   				   = parse_stations()
 	disable_interfering_processes()
-	handshakes 				   = deauthAttack(args.bssid,ssids,args.station,clean_user_input(args.ListenInt),clean_user_input(args.AttackInt))
+	deauthenticated 		   = deauthAttack(args.bssid,ssids,args.station,clean_user_input(args.ListenInt),clean_user_input(args.AttackInt))
 	for file in (APFileName,stationFileName):
 		try:
 			os.remove(file)
