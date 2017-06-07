@@ -9,7 +9,7 @@ When you’re in an environment where you see tens/hundreds of access points and
                            company
                            
   positional arguments:
-    company               target company name (e.g. "Trustave SpiderLabs")
+    company               target company name (e.g. "Raw Byte Security")
     
   optional arguments:
     -h, --help            show this help message and exit
